@@ -1,4 +1,4 @@
-function [filledin] = Filling(data,greymatter)
+function filledin = Filling(data,greymatter)
     mysize = size(data);
     Index = [0,0,0];
     label = zeros(mysize);
