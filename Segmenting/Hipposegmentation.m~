@@ -1,53 +1,39 @@
 clear;
-numsubjects = 1;
 addpath(genpath('/Users/Ali/Documents/MATLAB/REST_V1.8_130615'))
 subjectdir = '/Users/Ali/Desktop/Baycrest/Data/Post_Free_Label/01';
-hippodir = strcat(subjectdir,'/mri/HippRois');
+hippodir = strcat(subjectdir,'mri/HippRois');
 EntoRhinaldir = strcat(subjectdir,'/mri/EntoRhinalRois01');
-ParaHippodir = strcat(subjectdir,'/mri/ParaHippocampalRois01');
-Fusiformdir =   strcat(subjectdir,'/mri/fusiform01');
+ParaHippodir = subjectdir,'mri/ParaHippocampalRois01';
+Fusiformdir =   subjectdir  + '/mri/fusiform01';
 
-for counter=1:numsubjects
-    cd (hippodir)
-    lefthippofiles = dir('l*.nii');
-    righthippofiles = dir('r*.nii');
-    cd (EntoRhinaldir) 
-    leftEntoRhinalfiles = dir('l*.nii');
-    rightEntoRhinalfiles = dir('r*.nii');
-    cd (ParaHippodir)
-    leftParaHippofiles = dir('l*.nii');
-    rightParaHippofiles = dir('r*.nii');
-    cd (Fusiformdir)
-    leftFusiformfiles = dir('l*.nii');
-    rightFusiformfiles = dir('r.nii');
-    sides=['left';'righ'];
+cd (hippodir)
+hippofiles = dir('*.nii');
+hippofiles = hippofiles(end-1:end);
+cd (EntoRhinaldir) 
+EntoRhinalfiles = dir('*.nii');
+cd (ParaHippodir) 
+ParaHippofiles = dir('*.nii');
+cd (Fusiformdir)
+Fusiformfiles = dir('*.nii');
 
-     names = ['Right_HippoBody';'Left_HippoHead'];
 
-    %%LEFT SIDE / RIHT SIDE
-    for side = 1:2
-        currentside = sides(side,:);
-        %% ================= READ IN DATA ========================%%%
-        if currentside(1,:) =='left'
-            [hippodata,hippoheader] = rest_ReadNiftiImage(fullfile(lefthippofiles.folder,lefthippofiles.name));
-            [entrodata,entroheader] = rest_ReadNiftiImage(fullfile(leftEntoRhinalfiles.folder,leftEntoRhinalfiles.name));
-            [paradata,paraheader] =  rest_ReadNiftiImage(fullfile(leftParaHippofiles.folder,leftParaHippofiles.name));
-            [fusidata,fusiheader] =  rest_ReadNiftiImage(fullfile(leftFusiformfiles.folder,leftFusiformfiles.name));
-        elseif currentside(1,:) =='righ'
-            [hippodata,hippoheader] = rest_ReadNiftiImage(fullfile(lefthippofiles.folder,lefthippofiles.name));
-            [entrodata,entroheader] = rest_ReadNiftiImage(fullfile(leftEntoRhinalfiles.folder,leftEntoRhinalfiles.name));
-            [paradata,paraheader] =  rest_ReadNiftiImage(fullfile(leftParaHippofiles.folder,leftParaHippofiles.name));
-            [fusidata,fusiheader] =  rest_ReadNiftiImage(fullfile(leftFusiformfiles.folder,leftFusiformfiles.name));
-        end
+for counter=1
+    %% ================= READ IN DATA ========================%%%
+    [hippodata,hippoheader] = rest_ReadNiftiImage(fullfile(hippodir,hippofiles(counter).name));
+    [entrodata,entroheader] = rest_ReadNiftiImage(fullfile(EntoRhinaldir,EntoRhinalfiles(counter).name));
+    [paradata,paraheader] = rest_ReadNiftiImage(fullfile(ParaHippodir,ParaHippofiles(counter).name));
+    [fusidata,fusiheader] = rest_ReadNiftiImage(fullfile(Fusiformdir,Fusiformfiles(counter).name));
     
+    dims = size(hippodata);
     %% add check for dimensions, must all be same
     emptybrain = zeros(dims);
-  
+    
+    
     %% =================  Create CUT PLANE ========================%%%
 
     affinematrix = hippoheader.private.mat0(1:3,:);
     %%add consistantly check
-   
+    
     affineinverse = inv(hippoheader.private.mat0);
     affineinverse = affineinverse(1:3,:);
     
@@ -122,11 +108,7 @@ for counter=1:numsubjects
     scatter(hippobody_world(2,:),hippobody_world(3,:),'g')
     hold off;
     %%write this cuts to file 
-    if currentside(1,:) =='righ'
-        names = ['Right_HippoBody';'Left_HippoHead'];
-    elseif currentside(1,:) =='left'
-                names = ['Left_HippoBody';'Left_HippoHead'];
-    end
+    names = ['HippoBody';'HippoHead'];
     hippobody_world(4,:) = ones(length(hippobody_world),1);
     hippohead_world(4,:) = ones(length(hippohead_world),1);
     hippobody_voxel =  round(affineinverse*hippobody_world);
@@ -392,7 +374,7 @@ hippobodycut = nan(NUMCUTS,4,10000);
         rest_WriteNiftiImage(emptybrain,fusiheader,names(segment,:))
         
     end
-    end
+
 end
 
 
