@@ -28,11 +28,6 @@ for subject=1:numsubjects
     sides=['left';'righ'];
     
     
-
-
-
-
-
     %%LEFT SIDE / RIHT SIDE
     for side = 1:2
         currentside = sides(side,:);
@@ -63,7 +58,6 @@ for subject=1:numsubjects
     fusiheader.descrip = 'Ali_Segment';
 
     braindims = size(hippodata);
-    emptybrain = zeros(braindims);
   
     %% =================  CALCULATE CUT PLANE ========================%%%
     endpoints_voxels = zeros(2,3);
@@ -176,7 +170,7 @@ for subject=1:numsubjects
     hippobody_world = hippo_world(:,hippobody);
     hippohead_world = hippo_world(:,hippohead);
     
-    %% this planes myst be defined here
+    %% this planes must be defined here
     hippohead_cutplane = [myplane(hippohead_world(3,:),hippoheadmidpoint(2),hippoheadmidpoint(3));hippohead_world(3,:)];
 
       % Hippobody CUts
