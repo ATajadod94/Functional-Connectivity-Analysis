@@ -12,7 +12,6 @@ Fusiformdir =   strcat(subjectdir,'/mri/fusiform01');
 for subject=1:numsubjects
     
     %% SUBJECT DEPENDET DATA 
-
     cd (hippodir)
     lefthippofiles = dir('l*.nii');
     righthippofiles = dir('r*.nii');
@@ -361,29 +360,4 @@ for subject=1:numsubjects
     end
 end
 
-    %%plot sanity check
-    %{
-    figure(1)
-    scatter(hippo_world(2,:),hippo_world(3,:)) 
-    hold on;
-    scatter(hippohead_world(2,:),hippohead_world(3,:),'r')
-    scatter(hippobody_world(2,:),hippobody_world(3,:),'g')
-    hold off;
-    %}
-    %%write this cuts to file 
-
-    
-        %% ================= ==============================%%
-    %% Set up Hippohead data
-
-     
-        %%plot sanity check
-        %{
-        figure(1)
-        scatter(hippohead_world(2,:),hippohead_world(3,:)) 
-        hold on;
-        scatter(hippohead1_world(2,:),hippohead1_world(3,:),'r')
-        scatter(hippohead2_world(2,:),hippohead2_world(3,:),'g')
-         hold off;
-        %}
 
