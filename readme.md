@@ -1,4 +1,5 @@
-1.%20PreProcess
+#Functional Connectivity Analysis
+
 ## Overview
 
 This github contains the code use for analysis conducted at Baycrest research Hosptial under the guidance of [Dr.Zhongxu Liu](http://psych.utoronto.ca/Neuropsychologylab/zhongxu.html) . Most of the code, if not adapted from Dr.Liu's source material are written based on his direct direction.
