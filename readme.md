@@ -17,15 +17,11 @@ The code relies heavily on :
 
 The aim of this project is to perform functional connectitivty analysis on the Oculomotor and memory system. The data used is the same as that of Dr.Liu's phd projct (link) . No data available on this repo due to obvious ethical cocerns.
 
-## Steps
+## Detaild Explanation 
 
-<<<<<<< HEAD
-### 0. [Setup](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/0. Setup)
-=======
-### 0. [Setup](https://github.com/ATajadod94/Functional-Connectivity-Analysis/Code/0. Setup)
->>>>>>> d711b5e48cd9b07af23a0dde2c705a1f48e26375
+### 0. [Setup](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/0.%20Setup)
 
-[0.1](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/0. Setup/StructCreating.m) Renaming Folders : The folder names produced based on the trial and block order were changed to reflect the name of the condition as shown below . A structure called mysubject was created to retain the name changes and be used later for analysis.
+[0.1](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/0.%20Setup/StructCreating.m) Renaming Folders : The folder names produced based on the trial and block order were changed to reflect the name of the condition as shown below . A structure called mysubject was created to retain the name changes and be used later for analysis.
 
 
 ```python
@@ -57,11 +53,11 @@ OrgFileNames = {    '4_OB-AX  ep2d_bold ~184~Pre'
 ### 1. [PreProcess](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess)  
 
 
-[1.1](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.1 - Diciom to Nifi/DicomToNifti_LoopAllSubjects.m)  Dicom To Nifit: the files had to be converted to .nii formats. This was done in Matlab, using SPM.
+[1.1](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.1%20-%20Diciom%20to%20Nifi/DicomToNifti_LoopAllSubjects.m)  Dicom To Nifit: the files had to be converted to .nii formats. This was done in Matlab, using SPM.
 
 1.2 ReOrientation: The Anantomical images for each subject were reoriented using SPM. For all Subjects, the (0,0) point was adjusted as to reflect the hippocampus
 
-[1.3](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.8 Spm_Preprocess) [Spm_PreProcess](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1. PreProcess/1.8 Spm_Preprocess/PostOrgLoop.m) : The data was preprocessed using the SPM toolbox. The 6 preprocessign steps were done through one spm batch. The result data from each step was saved and specified with prefixes inidcated below. A short explanation and the name of the steps is available here.
+[1.3](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.8%20Spm_Preprocess) [Spm_PreProcess](https://github.com/ATajadod94/Functional-Connectivity-Analysis/blob/master/Code/1.%20PreProcess/1.8%20Spm_Preprocess/PostOrgLoop.m) : The data was preprocessed using the SPM toolbox. The 6 preprocessign steps were done through one spm batch. The result data from each step was saved and specified with prefixes inidcated below. A short explanation and the name of the steps is available here.
 
 
     1.3.1 Time Slicing : The time delay is adjusted for each participant. Prefix 'a'
@@ -112,4 +108,4 @@ Shell scripts were used in combination with freesurfer's toolbox. Recon-all func
 
     we cut the left and right , Hippocampus, EntoRhinal, Parahippocampius and Fusiform of the participants into different segments of the same size. To do so, the subject's mri image was imported and the data was converted to the real world cordinates. Thereafter, the normal plane for reach region of each participant was automatically calcualtedand used to to cut the specified region into the number of parts indicated previously by Dr.Liu. The created labels were saved to be used later as ROI's in the analysis
 
-  4.3: [Mapping Anatomical ROI's to functional images](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/4.%20Label_Code/4.3 Mapping) : In this step was are using Conn's connectivty toolbox to map the calculated ROI from the previous steps to each Subject's functional data. Taking advantage of existing processes in Conn's toolbox, further preprocessing steps was performed to denoise the data.
+  4.3: [Mapping Anatomical ROI's to functional images](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/4.%20Label_Code/4.3%20Mapping) : In this step was are using Conn's connectivty toolbox to map the calculated ROI from the previous steps to each Subject's functional data. Taking advantage of existing processes in Conn's toolbox, further preprocessing steps was performed to denoise the data.
