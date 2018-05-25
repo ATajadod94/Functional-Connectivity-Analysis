@@ -6,7 +6,7 @@ This github contains the code use for analysis conducted at Baycrest research Ho
 
 ## Code
 
-The code is written in Python, Matlab and bash language. Throughout the project it is assumed that the subject's data is in the same folder as The script folder. Such that from the main project directory, Data/Raw_data finds the raw data files.
+The code is written in Python, Matlab and bash and tcl. Throughout the project it is assumed that the subject's data is in the same folder as The script folder. Such that from the main project directory, Data/Raw_data finds the raw data files.
 
 The code relies heavily on :
 
