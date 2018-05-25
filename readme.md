@@ -20,12 +20,12 @@ The aim of this project is to perform functional connectitivty analysis on the O
 ## Steps
 
 <<<<<<< HEAD
-### 0. [Setup](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/0. Setup)
+### 0. [Setup](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/0.%20Setup)
 =======
-### 0. [Setup](https://github.com/ATajadod94/Functional-Connectivity-Analysis/Code/0. Setup)
+### 0. [Setup](https://github.com/ATajadod94/Functional-Connectivity-Analysis/Code/0.%20Setup)
 >>>>>>> d711b5e48cd9b07af23a0dde2c705a1f48e26375
 
-[0.1](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/0. Setup/StructCreating.m) Renaming Folders : The folder names produced based on the trial and block order were changed to reflect the name of the condition as shown below . A structure called mysubject was created to retain the name changes and be used later for analysis.
+[0.1](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/0.%20Setup/StructCreating.m) Renaming Folders : The folder names produced based on the trial and block order were changed to reflect the name of the condition as shown below . A structure called mysubject was created to retain the name changes and be used later for analysis.
 
 
 ```python
@@ -61,7 +61,7 @@ OrgFileNames = {    '4_OB-AX  ep2d_bold ~184~Pre'
 
 1.2 ReOrientation: The Anantomical images for each subject were reoriented using SPM. For all Subjects, the (0,0) point was adjusted as to reflect the hippocampus
 
-[1.3](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.8 Spm_Preprocess) [Spm_PreProcess](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.8 Spm_Preprocess/PostOrgLoop.m) : The data was preprocessed using the SPM toolbox. The 6 preprocessign steps were done through one spm batch. The result data from each step was saved and specified with prefixes inidcated below. A short explanation and the name of the steps is available here.
+[1.3](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.8%20Spm_Preprocess) [Spm_PreProcess](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.8 Spm_Preprocess/PostOrgLoop.m) : The data was preprocessed using the SPM toolbox. The 6 preprocessign steps were done through one spm batch. The result data from each step was saved and specified with prefixes inidcated below. A short explanation and the name of the steps is available here.
 
 
     1.3.1 Time Slicing : The time delay is adjusted for each participant. Prefix 'a'
