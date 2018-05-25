@@ -61,7 +61,7 @@ OrgFileNames = {    '4_OB-AX  ep2d_bold ~184~Pre'
 
 1.2 ReOrientation: The Anantomical images for each subject were reoriented using SPM. For all Subjects, the (0,0) point was adjusted as to reflect the hippocampus
 
-[1.3](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.8 Spm_Preprocess) [Spm_PreProcess](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1. PreProcess/1.8 Spm_Preprocess/PostOrgLoop.m) : The data was preprocessed using the SPM toolbox. The 6 preprocessign steps were done through one spm batch. The result data from each step was saved and specified with prefixes inidcated below. A short explanation and the name of the steps is available here.
+[1.3](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.8 Spm_Preprocess) [Spm_PreProcess](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.8 Spm_Preprocess/PostOrgLoop.m) : The data was preprocessed using the SPM toolbox. The 6 preprocessign steps were done through one spm batch. The result data from each step was saved and specified with prefixes inidcated below. A short explanation and the name of the steps is available here.
 
 
     1.3.1 Time Slicing : The time delay is adjusted for each participant. Prefix 'a'
@@ -112,4 +112,4 @@ Shell scripts were used in combination with freesurfer's toolbox. Recon-all func
 
     we cut the left and right , Hippocampus, EntoRhinal, Parahippocampius and Fusiform of the participants into different segments of the same size. To do so, the subject's mri image was imported and the data was converted to the real world cordinates. Thereafter, the normal plane for reach region of each participant was automatically calcualtedand used to to cut the specified region into the number of parts indicated previously by Dr.Liu. The created labels were saved to be used later as ROI's in the analysis
 
-  4.3: [Mapping Anatomical ROI's to functional images](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/4.%20Label_Code/4.3 Mapping) : In this step was are using Conn's connectivty toolbox to map the calculated ROI from the previous steps to each Subject's functional data. Taking advantage of existing processes in Conn's toolbox, further preprocessing steps was performed to denoise the data.
+  4.3: [Mapping Anatomical ROI's to functional images](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/4.%20Label_Code/4.3%20Mapping) : In this step was are using Conn's connectivty toolbox to map the calculated ROI from the previous steps to each Subject's functional data. Taking advantage of existing processes in Conn's toolbox, further preprocessing steps was performed to denoise the data.
