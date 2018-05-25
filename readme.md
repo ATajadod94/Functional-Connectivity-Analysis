@@ -1,4 +1,4 @@
-#Functional Connectivity Analysis
+# Functional Connectivity Analysis
 
 ## Overview
 
