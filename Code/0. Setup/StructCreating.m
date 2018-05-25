@@ -1,5 +1,5 @@
 %-----------------------------------------------------------------------
-% Alireza Tajadod 
+% Alireza Tajadod
 %-----------------------------------------------------------------------
 
 
@@ -55,14 +55,13 @@ OrgFileNames = {
                         '6_OB-AX  ep2d_bold ~ 290'
                         '7_OB-AX  ep2d_bold ~184~Post 1'
                         '8_OB-AX  ep2d_bold ~ 290'
-                        '9_OB-AX  ep2d_bold ~ 290' 
+                        '9_OB-AX  ep2d_bold ~ 290'
                         '10_OB-AX  ep2d_bold ~184~Post 2'
                         '11_OB-AX  ep2d_bold ~ 292'
                         '12_OB-AX  ep2d_bold ~184~Post 3 ~Task'
                         '13_OB-AX  ep2d_bold ~184~Post 4~Task'
                         '3_T1 MPRAGE OB-AXIAL'
-
-                          }  ;     
+                  }  ;
 
 for i=1:numel(fields)
     MySubjects.(fields{i}).Runs.NameChanges = cell(10,1);
@@ -84,45 +83,45 @@ for i=1:numel(fields)
             end
         end
         if ismember(i,[3,4,7,8,11,12,15,16,19,20])
-            if Position == 9 
+            if Position == 9
                 Position = 10;
             elseif Position == 11
                 Position =9;
             end
         end
-       
+
         MySubjects.(fields{i}).Runs.(RunNames{j}).Position = Position;
         MySubjects.(fields{i}).Runs.(RunNames{j}).Folder = fullfile(MySubjects.(fields{i}).Folder,RunNames{j});
         MySubjects.(fields{i}).Runs.(RunNames{j}).OrgFileName = fullfile(OrgFileNames( MySubjects.(fields{i}).Runs.(RunNames{j}).Position));
         MySubjects.(fields{i}).Runs.(RunNames{j}).OldFolder = fullfile(MySubjects.(fields{i}).Folder,OrgFileNames( MySubjects.(fields{i}).Runs.(RunNames{j}).Position));
-  
-        
+
+
         allfile = dir(MySubjects.(fields{i}).Runs.(RunNames{j}).OldFolder{:});
         allfile = allfile([allfile.isdir] ~= 1);
-		allfile = allfile(7:end); 
+		allfile = allfile(7:end);
         l = 1;
         for m=2:2:length(allfile)
 		          MySubjects.(fields{i}).Runs.(RunNames{j}).Images{l} = fullfile(MySubjects.(fields{i}).Runs.(RunNames{j}).Folder,allfile(m).name);
-                  l = l+1;           
+                  l = l+1;
         end
-        
-       % py.os.rename(MySubjects.(fields{i}).Runs.(RunNames{j}).OldFolder{:},MySubjects.(fields{i}).Runs.(RunNames{j}).Folder)
-        
-        Trials= allfile; 
+
+        py.os.rename(MySubjects.(fields{i}).Runs.(RunNames{j}).OldFolder{:},MySubjects.(fields{i}).Runs.(RunNames{j}).Folder)
+
+        Trials= allfile;
         Trials= {Trials.name};
         FirstTrial = Trials{1};
         LastTrial = Trials{end};
         temp = strfind(FirstTrial,'-');
         MySubjects.(fields{i}).Runs.(RunNames{j}).FirstTrial = str2num(FirstTrial(temp(end)-3:temp(end)-1));
         MySubjects.(fields{i}).Runs.(RunNames{j}).LastTrial = str2num(LastTrial(temp(end)-3:temp(end)-1));
-        
+
         Position = Position+1;
         MySubjects.(fields{i}).Runs.NameChanges(Position-1) = cellstr(RunNames{j});
 
-    end 
+    end
 
 end
 
-            
 
-%save('MySubjects');
+
+save('MySubjects');
