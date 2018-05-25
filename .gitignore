@@ -1,3 +1,62 @@
 
 Code/4. Label_Code/Griffis/
 Code/4. Label_Code/Glasser/
+Code/4. Label_Code/.DS_Store
+Code/4. Label_Code/Glasser/Label_creation_pipeline.m
+Code/4. Label_Code/Glasser/makelabels.m
+Code/4. Label_Code/Glasser/README.txt
+Glasser/Label_creation_pipeline.m
+Glasser/makelabels.m
+Glasser/README.txt
+Griffis/lh.L_V1_ROI.label
+Griffis/lh.L_V1_ROI_ext.label
+Griffis/lh.L_V2_ROI.label
+Griffis/lh.L_V2_ROI_ext.label
+Griffis/lh.L_V3_ROI.label
+Griffis/lh.L_V3_ROI_ext.label
+Griffis/resize_img.m
+Griffis/rh.R_V1_ROI.label
+Griffis/rh.R_V1_ROI_ext.label
+Griffis/rh.R_V2_ROI.label
+Griffis/rh.R_V2_ROI_ext.label
+Griffis/rh.R_V3_ROI.label
+Griffis/rh.R_V3_ROI_ext.label
+Griffis/V1_Label_2_Label/.DS_Store
+Griffis/V1_Label_2_Label/2_LH_V1.label
+Griffis/V1_Label_2_Label/2_RH_V1.label
+Griffis/V1_Label_2_Label/3_LH_V1.label
+Griffis/V1_Label_2_Label/3_RH_V1.label
+Griffis/V1_Label_2_Label/4_LH_V1.label
+Griffis/V1_Label_2_Label/4_RH_V1.label
+Griffis/V1_Label_2_Label/5_LH_V1.label
+Griffis/V1_Label_2_Label/5_RH_V1.label
+Griffis/V1_Label_2_Label/6_LH_V1.label
+Griffis/V1_Label_2_Label/6_RH_V1.label
+Griffis/V1_Label_2_Label/7_LH_V1.label
+Griffis/V1_Label_2_Label/7_RH_V1.label
+Griffis/V1_Label_2_Label/8_LH_V1.label
+Griffis/V1_Label_2_Label/8_RH_V1.label
+Griffis/V1_Label_2_Label/average_to_subject_label.m
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/.DS_Store
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/1_LH_V1.label.nii
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/1_LH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/1_RH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/2_LH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/2_RH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/3_LH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/3_RH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/4_LH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/4_RH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/5_LH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/5_RH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/6_LH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/6_RH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/7_LH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/7_RH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/8_LH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/8_RH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/9_LH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/fsaverage_mni_nifti/9_RH_V1.label.nii.gz
+Griffis/V1_Label_2_Label/label_to_nii_epi.m
+Griffis/V1_Label_2_Label/resize_img.m
+Griffis/V1_Label_2_Label/V1_label_2_label.m
