@@ -17,13 +17,9 @@ The code relies heavily on :
 
 The aim of this project is to perform functional connectitivty analysis on the Oculomotor and memory system. The data used is the same as that of Dr.Liu's phd projct (link) . No data available on this repo due to obvious ethical cocerns.
 
-## Steps
+## Detaild Explanation 
 
-<<<<<<< HEAD
 ### 0. [Setup](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/0.%20Setup)
-=======
-### 0. [Setup](https://github.com/ATajadod94/Functional-Connectivity-Analysis/Code/0.%20Setup)
->>>>>>> d711b5e48cd9b07af23a0dde2c705a1f48e26375
 
 [0.1](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/0.%20Setup/StructCreating.m) Renaming Folders : The folder names produced based on the trial and block order were changed to reflect the name of the condition as shown below . A structure called mysubject was created to retain the name changes and be used later for analysis.
 
