@@ -53,11 +53,11 @@ OrgFileNames = {    '4_OB-AX  ep2d_bold ~184~Pre'
 ### 1. [PreProcess](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess)  
 
 
-[1.1](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.1 - Diciom to Nifi/DicomToNifti_LoopAllSubjects.m)  Dicom To Nifit: the files had to be converted to .nii formats. This was done in Matlab, using SPM.
+[1.1](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.1%20-%20Diciom%20to%20Nifi/DicomToNifti_LoopAllSubjects.m)  Dicom To Nifit: the files had to be converted to .nii formats. This was done in Matlab, using SPM.
 
 1.2 ReOrientation: The Anantomical images for each subject were reoriented using SPM. For all Subjects, the (0,0) point was adjusted as to reflect the hippocampus
 
-[1.3](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.8%20Spm_Preprocess) [Spm_PreProcess](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.8 Spm_Preprocess/PostOrgLoop.m) : The data was preprocessed using the SPM toolbox. The 6 preprocessign steps were done through one spm batch. The result data from each step was saved and specified with prefixes inidcated below. A short explanation and the name of the steps is available here.
+[1.3](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/1.%20PreProcess/1.8%20Spm_Preprocess) [Spm_PreProcess](https://github.com/ATajadod94/Functional-Connectivity-Analysis/blob/master/Code/1.%20PreProcess/1.8%20Spm_Preprocess/PostOrgLoop.m) : The data was preprocessed using the SPM toolbox. The 6 preprocessign steps were done through one spm batch. The result data from each step was saved and specified with prefixes inidcated below. A short explanation and the name of the steps is available here.
 
 
     1.3.1 Time Slicing : The time delay is adjusted for each participant. Prefix 'a'
