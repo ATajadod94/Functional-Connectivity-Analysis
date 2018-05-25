@@ -19,7 +19,11 @@ The aim of this project is to perform functional connectitivty analysis on the O
 
 ## Steps
 
+<<<<<<< HEAD
 ### 0. [Setup](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/0. Setup)
+=======
+### 0. [Setup](https://github.com/ATajadod94/Functional-Connectivity-Analysis/Code/0. Setup)
+>>>>>>> d711b5e48cd9b07af23a0dde2c705a1f48e26375
 
 [0.1](https://github.com/ATajadod94/Functional-Connectivity-Analysis/tree/master/Code/0. Setup/StructCreating.m) Renaming Folders : The folder names produced based on the trial and block order were changed to reflect the name of the condition as shown below . A structure called mysubject was created to retain the name changes and be used later for analysis.
 
