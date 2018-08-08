@@ -13,9 +13,8 @@ end
 
 batch.filename= fullfile(rootfolder,'Conn_Bash.mat');
 
-nsessions = 4;
-nconditions = 1;
-nsubj = 2;
+nsessions = 5;
+nsubj = 20;
 
 
 batch.Setup.isnew=1;                 % 0: modifies existing project; 1: creates new proejct
@@ -67,10 +66,10 @@ end
 %     end
 % end
 
-batch.Setup.conditions.names={'encoding_fam2'};
-for ncond=1:nconditions,for nsub=1:nsubj,for nses=1:nsessions,  batch.Setup.conditions.onsets{ncond}{nsub}{nses}=[];batch.Setup.conditions.durations{ncond}{nsub}{nses}=[]; end;end;end
-for ncond=1:nconditions,for nsub=1:nsubj,for nses=ncond,        batch.Setup.conditions.onsets{ncond}{nsub}{nses}=0; batch.Setup.conditions.durations{ncond}{nsub}{nses}=inf;end;end;end
-
+% batch.Setup.conditions.names={'encoding_fam2'};
+% for ncond=1:nconditions,for nsub=1:nsubj,for nses=1:nsessions,  batch.Setup.conditions.onsets{ncond}{nsub}{nses}=[];batch.Setup.conditions.durations{ncond}{nsub}{nses}=[]; end;end;end
+% for ncond=1:nconditions,for nsub=1:nsubj,for nses=ncond,        batch.Setup.conditions.onsets{ncond}{nsub}{nses}=0; batch.Setup.conditions.durations{ncond}{nsub}{nses}=inf;end;end;end
+% 
 
 batch.Setup.covariates.names={'motion'};      
 for i = 1:nsubj
