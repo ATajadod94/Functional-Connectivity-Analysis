@@ -1,8 +1,0 @@
-conn_batch_encoding_Setup
-conn_batch_encoding_Preprocessing
-conn_batch_encoding_Analyses
-
-
-conn_batch_resting_Setup
-conn_batch_resting_Preprocessing
-conn_batch_resting_Analyses
